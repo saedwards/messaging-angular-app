@@ -1,0 +1,9 @@
+<div class="messages" #containerEl>
+  <header class="header">
+    <img class="slack-image" src="assets/logo.png" />Slack messaging
+  </header>
+  <div class="messages__conversation">
+    <app-view-conversation (messagesUpdatedEvent)="scrollToContainerBottom()"></app-view-conversation>
+    <app-create-message></app-create-message>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+.view-conversation {
+  display : flex;
+  flex-direction : column;
+  margin : 0;
+  padding : .5rem;
+  padding-bottom : 0;
+  /*max-height : 400px;*/
+  overflow-y : auto;
+  list-style-type : none;
+  background-color : #f5f5f5;
+
+  * {
+    line-height : 1.4rem;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial;
+  }
+
+  h1 {
+    font-weight : normal;
+  }
+
+  &__heading {
+    font-size : 1.8rem;
+  }
+
+  &__list {
+    position : relative;
+  }
+
+  &__item {
+    align-self : flex-start;
+    margin-left : 5%;
+    width : 95%;
+
+    + .view-conversation__item {
+      margin-top : 1rem;
+    }
+
+    &--you {
+      margin-left : 0;
+    }
+  }
+
+  &__time {
+    display : block;
+    margin-bottom : .3rem;
+    font-size : .8rem;
+    color : #666;
+  }
+
+  &__message {
+    padding : 1rem;
+    border-radius : 3px;
+  }
+
+  &__message-animation {
+    position : relative;
+    overflow : hidden;
+    border-radius : 3px;
+    background-color : #fff;
+    border-left : 5px solid #dca629;
+  }
+
+  &__message-cover {
+    position : absolute;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+    opacity: 0;
+  }
+
+  &__avatar {
+    float : right;
+    margin-left : 1rem;
+    margin-top : -.4rem;
+    margin-right : -.4rem;
+    max-width : 3.5rem;
+  }
+
+  &__name {
+    display : inline-block;
+    margin-bottom : .2rem;
+  }
+}
