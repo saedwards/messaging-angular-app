@@ -1,0 +1,10 @@
+<form class="messages-create-message" (submit)="sendMessage($event)">
+  <label class="visually-hidden" for="create-message-input">Message</label>
+  <textarea
+    id="create-message-input"
+    class="messages-create-message__input"
+    [formField]="messageForm.text"
+    (keydown.enter)="sendMessage($event)"
+  ></textarea>
+  <button type="submit" class="messages-create-message__send">Send message</button>
+</form>

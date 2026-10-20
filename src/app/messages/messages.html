@@ -1,0 +1,9 @@
+<div class="messages messages--grid" #containerEl>
+  <header class="header">
+    Slack Messaging
+  </header>
+  <div class="messages__conversation">
+    <app-view-conversation (messagesUpdated)="scrollToContainerBottom()" />
+    <app-create-message />
+  </div>
+</div>

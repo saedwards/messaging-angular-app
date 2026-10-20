@@ -1,0 +1,41 @@
+.messages--grid {
+  display : grid;
+  /*grid-template-columns: repeat(5, 1fr);*/
+  grid-template-columns: 60px 1fr 1fr 1fr 60px;
+  grid-template-areas:
+    "header   header    header    header    header"
+    "content  content   content   content   content";
+
+  @media(min-width: 500px) {
+    grid-template-columns: 60px 1fr 1fr 1fr 60px;
+    grid-template-areas:
+      ".   header    header    header    ."
+      ".   content   content   content   .";
+  }
+
+  @media(min-width: 800px) {
+    grid-template-columns: 150px 1fr 1fr 1fr 150px;
+  }
+
+  .messages__conversation {
+    position : relative;
+    grid-area: content;
+  }
+}
+
+.header {
+  padding : .5rem;
+  grid-area: header;
+  font-size : .75rem;
+  font-family: 'Helvetica Neue', Arial;
+
+  /*grid-column: 1 / 6;
+  grid-row: 1;*/
+
+  .slack-image {
+    display : inline-block;
+    height : 25px;
+    margin-right : .3rem;
+    vertical-align : middle;
+  }
+}
